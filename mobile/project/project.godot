@@ -1,0 +1,83 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="废土回响"
+config/version="0.1.0"
+config/description="Dustline Mobile — Android / iPhone landscape touch edition"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="DustlineMobile"
+run/main_scene="res://main.tscn"
+config/features=PackedStringArray("4.7", "Mobile")
+config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/size/mode=0
+window/handheld/orientation=4
+window/energy_saving/keep_screen_on=true
+window/size/resizable=true
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=false
+pointing/emulate_mouse_from_touch=true
+
+[input]
+
+move_forward={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":87)]}
+move_back={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":83)]}
+move_left={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":65)]}
+move_right={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":68)]}
+sprint={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":4194325)]}
+jump={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":32)]}
+interact={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":69)]}
+heal={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":81)]}
+build_shelter={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":66)]}
+repel={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":70)]}
+
+character_skill={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":67)]}
+
+fire_weapon={"deadzone":0.5,"events":[Object(InputEventMouseButton,"button_index":2),Object(InputEventKey,"physical_keycode":86)]}
+aim_scope={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":75)]}
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="mobile"
+renderer/rendering_method.mobile="mobile"
+renderer/rendering_method.web="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0.02, 0.025, 0.035, 1)
+anti_aliasing/quality/msaa_3d=1
+scaling_3d/mode=0
+lights_and_shadows/directional_shadow/size=2048
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=1
+lights_and_shadows/positional_shadow/atlas_size=1024
+environment/ssao/quality=1
+environment/ssao/half_size=true
+environment/ssil/quality=1
+environment/volumetric_fog/volume_size=64
+environment/volumetric_fog/volume_depth=64
+
+[mobile]
+
+controls_enabled=true

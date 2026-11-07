@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://clevu0dn65gbx"]
+
+[ext_resource type="PackedScene" path="res://main.tscn" id="1"]
+
+[node name="Wasteland" unique_id=1594951459 instance=ExtResource("1")]
+
+[node name="Player" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.966858, 0, 8)
+
+[node name="CollisionShape3D" parent="Player" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.93, 0)
+
+[node name="Camera3D" parent="Player" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.97437006, 0.22495104, 0, -0.22495104, 0.97437006, 0, 2.5, 5.5)

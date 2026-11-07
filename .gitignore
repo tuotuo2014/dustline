@@ -1,0 +1,14 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.jks
+*.keystore
+.godot/
+.runtime/
+.codex-backups/
+__pycache__/
+*.pyc
